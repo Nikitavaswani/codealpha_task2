@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">   
+
+</head>
+<body>
+
+  <header>
+    <h1>Image Gallery</h1>
+    <p>Shared glimpses of nature • flowers • books • technology • people</p>
+  </header>
+
+  <div class="filter-bar">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="nature">Nature</button>
+    <button class="filter" data-filter="flowers">Flowers</button>
+    <button class="filter" data-filter="books">Books</button>
+    <button class="filter" data-filter="technology">Technology</button>
+    <button class="filter" data-filter="people">People</button>
+  </div>
+
+  <div class="gallery-grid">
+
+    <!--flower -->
+
+    <div class="card flowers" data-title="Flower">
+      <img src="flower1.jpg" alt="Flower" loading="lazy">
+      <div class="title">Flower</div>
+    </div>
+
+    <div class="card flowers" data-title="Flower">
+      <img src="flower2.jpg" alt="Flower" loading="lazy">
+      <div class="title">Flower</div>
+    </div>
+
+    <div class="card flowers" data-title="Flower">
+      <img src="flower3.jpg" alt="Flower" loading="lazy">
+      <div class="title">Flower</div>
+    </div>
+
+    <div class="card flowers" data-title="Flower">
+      <img src="flower4.jpg" alt="Flower" loading="lazy">
+      <div class="title">Flower</div>
+    </div>
+
+    <div class="card flowers" data-title="Flower">
+      <img src="flower5.jpg" alt="Flower" loading="lazy">
+      <div class="title">Flower</div>
+    </div>
+
+    
+    <!-- nature -->
+    <div class="card nature" data-title="Nature">
+      <img src="nature1.jpg" alt="Nature" loading="lazy">
+      <div class="title">Nature</div>
+    </div>
+
+    <div class="card nature" data-title="Nature">
+      <img src="nature2.jpg" alt="Nature" loading="lazy">
+      <div class="title">Nature</div>
+    </div>
+
+    <div class="card nature" data-title="Nature">
+      <img src="nature3.jpg" alt="Nature" loading="lazy">
+      <div class="title">Nature</div>
+    </div>
+
+    <div class="card nature" data-title="Nature">
+      <img src="nature4.jpg" alt="Nature" loading="lazy">
+      <div class="title">Nature</div>
+    </div>
+
+    <div class="card nature" data-title="Nature">
+      <img src="nature5.jpg" alt="Nature" loading="lazy">
+      <div class="title">Nature</div>
+    </div>
+
+    <!-- people -->
+    <div class="card people" data-title="People">
+      <img src="people1.jpg" alt="People" loading="lazy">
+      <div class="title">People</div>
+    </div>
+
+    <div class="card people" data-title="People">
+      <img src="people2.jpg" alt="People" loading="lazy">
+      <div class="title">People</div>
+    </div>
+
+    <div class="card people" data-title="People">
+      <img src="people3.jpg" alt="People" loading="lazy">
+      <div class="title">People</div>
+    </div>
+
+    <div class="card people" data-title="People">
+      <img src="people4.jpg" alt="People" loading="lazy">
+      <div class="title">People</div>
+    </div>
+
+    <div class="card people" data-title="People">
+      <img src="people5.jpg" alt="People" loading="lazy">
+      <div class="title">People</div>
+    </div>
+
+    <!-- books -->
+    <div class="card books" data-title="Books">
+      <img src="book1.jpg" alt="Books" loading="lazy">
+      <div class="title">Books</div>
+    </div>
+
+    <div class="card books" data-title="Books">
+      <img src="book2.jpg" alt="Books" loading="lazy">
+      <div class="title">Books</div>
+    </div>
+
+    <div class="card books" data-title="Books">
+      <img src="book3.jpg" alt="Books" loading="lazy">
+      <div class="title">Books</div>
+    </div>
+
+    <div class="card books" data-title="Books">
+      <img src="book4.jpg" alt="Books" loading="lazy">
+      <div class="title">Books</div>
+    </div>
+
+    <div class="card books" data-title="Books">
+      <img src="book5.jpg" alt="Books" loading="lazy">
+      <div class="title">Books</div>
+    </div>
+
+    <!-- technology -->
+    <div class="card technology" data-title="Technology">
+      <img src="technology1.jpg" alt="Technology" loading="lazy">
+      <div class="title">Technology</div>
+    </div>
+
+    <div class="card technology" data-title="Technology">
+      <img src="technology2.jpg" alt="Technology" loading="lazy">
+      <div class="title">Technology</div>
+    </div>
+
+    <div class="card technology" data-title="Technology">
+      <img src="technology3.jpg" alt="Technology" loading="lazy">
+      <div class="title">Technology</div>
+    </div>
+
+    <div class="card technology" data-title="Technology">
+      <img src="technology4.jpg" alt="Technology" loading="lazy">
+      <div class="title">Technology</div>
+    </div>
+
+    <div class="card technology" data-title="Technology">
+      <img src="technology5.jpg" alt="Technology" loading="lazy">
+      <div class="title">Technology</div>
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox hidden" id="lightbox">
+    <button class="close" aria-label="Close lightbox">×</button>
+
+    <div class="lightbox-main">
+      <img id="lightbox-image" alt="Gallery photo" draggable="false">
+      <div class="caption" id="caption"></div>
+    </div>
+
+    <div class="lightbox-controls">
+      <button class="nav prev" aria-label="Previous image">←</button>
+      <span class="counter" id="counter">1 / 25</span>
+      <button class="nav next" aria-label="Next image">→</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
